@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Leakage Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Leakage Scan – Understanding Sensitive Data Exposure</h1>
+        <p>This overview clarifies what a data-leakage scan is, why “no issues found” doesn’t always equal “no danger,” how sensitive information can still slip out, and the principles behind these scans.</p>
+
+        <h2>What Is a Data Leakage Scan?</h2>
+        <p>A data leakage scan is a type of security review that looks for situations where confidential data might be revealed unintentionally whether in log files, configuration settings, open APIs, or misconfigured databases.</p>
+
+        <p>Key elements of a data-leakage scan include:</p>
+        <ul>
+            <li><strong>Exposed-Data Detection:</strong> Searching for personal details, credentials, or proprietary information that may be reachable.</li>
+            <li><strong>Configuration Review:</strong> Checking system and application settings to confirm data is stored and transmitted securely.</li>
+            <li><strong>Endpoint Verification;</strong> Ensuring APIs and services aren’t disclosing data through unprotected endpoints.</li>
+            <li><strong>Compliance Comparison:</strong> Measuring current data-handling practices against industry standards and regulations.</li>
+        </ul>
+
+        <h2>What Happens When a Data Leakage Scan Finds Nothing?</h2>
+        <p>If the scan reports zero leakage issues, it might mean:</p>
+        <ul>
+            <li>Sensitive data is locked down and tightly controlled.</li>
+            <li>Systems and applications follow security best practices.</li>
+            <li>No accidental exposure is occurring via logs, APIs, or faulty configs.</li>
+            <li>Still, routine scans are wise subtle leaks or new flaws can appear at any time.</li>
+        </ul>
+        <p>A clean report is encouraging, but continuous monitoring and periodic reassessment remain vital.</p>
+
+        <h2>How Users and Organisations Can Be Exposed to Data Leakage Risks</h2>
+        <p>Without strong prevention measures, the following dangers can arise:</p>
+        <ul>
+            <li><strong>Unauthorized Access:</strong> Attackers may exploit exposed data.</li>
+            <li><strong>Compliance Breaches:</strong> Accidental leaks can violate data-protection laws.</li>
+            <li><strong>Reputation Damage:</strong> A public data breach erodes user confidence.</li>
+            <li><strong>Financial Penalties:</strong> Fines and legal costs often accompany major breaches.</li>
+        </ul>
+
+        <h2>How to Mitigate Data Leakage Vulnerabilities</h2>
+        <p>Adopt these practices to keep sensitive data under wraps:</p>
+        <ul>
+            <li><strong>Secure Configurations:</strong> Harden system and application settings.</li>
+            <li><strong>Regular Audits:</strong> Schedule scans and assessments to spot and fix problems promptly.</li>
+            <li><strong>Access Controls:</strong> Use strict permissions and encryption for sensitive assets.</li>
+            <li><strong>Employee Training:</strong> Teach staff safe data-handling procedures and the risks of leakage.</li>
+            <li><strong>Compliance Monitoring:</strong> Continually gauge alignment with data-protection standards.</li>
+        </ul>
+
+        <h2>The Science Behind Data Leakage Scanning</h2>
+        <p>Modern scanning blends automated tools with human review to pinpoint exposures. The workflow typically includes:</p>
+        <ul>
+            <li><strong>Data Discovery:</strong> Locating and classifying sensitive information across environments.</li>
+            <li><strong>Pattern Recognition:</strong> Using algorithms to flag data sequences that look confidential.</li>
+            <li><strong>Configuration Analysis:</strong> Inspecting permissions and settings for dangerous misconfigurations.</li>
+            <li><strong>Reporting:</strong> Producing detailed findings and remediation guidance.</li>
+        </ul>
+
+        <h2>Why Regular Data Leakage Scans Are Essential</h2>
+        <p>Ongoing scans are crucial for:</p>
+        <ul>
+            <li><strong>Preventing Breaches:</strong> Early detection curbs risks before attackers act.</li>
+            <li><strong>Maintaining Compliance:</strong> Demonstrates adherence to data-protection laws and standards.</li>
+            <li><strong>Safeguarding Reputation:</strong> Reduces the chance of public trust erosion after a leak.</li>
+            <li><strong>Continuous Improvement:</strong> Feeds security teams with insights to strengthen defences over time.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further insights on data leakage prevention and security best practices, explore these resources:</p>
+        <ul>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top Ten</a></li>
+            <li><a href="https://www.cisecurity.org/" target="_blank">CIS Security Benchmarks</a></li>
+            <li><a href="https://www.dataprotectionreport.com/" target="_blank">Data Protection Report</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

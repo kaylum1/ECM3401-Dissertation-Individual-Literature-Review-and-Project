@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cookie Privacy Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cookie Privacy Scan - Understanding Online Privacy</h1>
+        <p>This page will break down and explains cookie privacy scans, what it means when a scan does not detect anything, how users can be exposed, and the scientific process behind how these scans work.</p>
+
+        <h2>What is Cookie Privacy?</h2>
+        <p>Cookies are small files stored on a user's device by websites; they help websites remember key pieces of information like login details, track user behaviour, and improve user experience. Though not all cookies are privacy-friendly, and some can be used to track users across multiple sites.</p>
+
+        <p>Common types of cookies include:</p>
+        <ul>
+            <li><strong>Session Cookies:</strong> Temporary; vanish once the browser closes.</li>
+            <li><strong>Persistent Cookies:</strong> Stay on the device for a set time to keep user preferences.</li>
+            <li><strong>Third-Party Cookies:</strong> Placed by advertisers or analytics firms to monitor browsing.</li>
+            <li><strong>Secure Cookies:</strong> Sent only over HTTPS, blocking interception.</li>
+            <li><strong>HttpOnly Cookies:</strong> Shielded from JavaScript, reducing theft via XSS.</li>
+        </ul>
+
+        <h2>What Happens When a Cookie Privacy Scan Shows Nothing?</h2>
+        <p>If a scan does not detect any privacy issues with cookies, it may indicate some of the following:</p>
+        <ul>
+            <li>The site relies solely on essential cookies and avoids tracking.</li>
+            <li>No third-party cookies are used for ads or analytics.</li>
+            <li>The site follows privacy laws such as GDPR and CCPA.</li>
+            <li>Every cookie carries proper attributes (e.g., Secure, HttpOnly, SameSite).</li>
+        </ul>
+        <p>Bear in mind, some trackers are engineered to stay off the radar. A spotless scan does not guarantee airtight privacy.</p>
+
+        <h2>How Users are Left Exposed Without Cookie Privacy Protections</h2>
+        <p>When websites do not manage cookies responsibly, users may face the following risks:</p>
+        <ul>
+            <li><strong>Behavioural Tracking:</strong> Websites can track user activity across multiple pages and sites.</li>
+            <li><strong>Targeted Advertising:</strong> Advertisers build detailed profiles based on browsing habits.</li>
+            <li><strong>Data Leakage;</strong> Poor cookie management may expose personal data to third parties.</li>
+            <li><strong>Security Risks:</strong> Cookies without proper security flags can be stolen through Cross-Site Scripting (XSS) attacks.</li>
+            <li><strong>Regulatory Non-Compliance:</strong> Websites that do not disclose cookie usage may violate GDPR or CCPA.</li>
+        </ul>
+
+        <h2>How to Protect Yourself from Cookie Tracking</h2>
+        <p>Users can take the following steps to enhance cookie privacy:</p>
+        <ul>
+            <li><strong>Use Privacy-Focused Browsers:</strong> Firefox, Brave, and DuckDuckGo offer enhanced tracking protection.</li>
+            <li><strong>Install Tracker-Blocking Extensions:</strong> Tools like Privacy Badger and uBlock Origin block third-party cookies.</li>
+            <li><strong>Disable Third-Party Cookies:</strong> Most browsers allow users to block cookies from external domains.</li>
+            <li><strong>Regularly Clear Cookies:</strong> Deleting cookies prevents long-term tracking.</li>
+            <li><strong>Opt Out of Tracking:</strong> Some websites allow users to adjust cookie settings in their privacy preferences.</li>
+        </ul>
+
+        <h2>The Science Behind Cookie Privacy Scanning</h2>
+        <p>Cookie privacy scanners analyse how websites store and use cookies. The process includes:</p>
+        <ul>
+            <li><strong>Inspecting HTTP Headers:</strong> The scanner examines Set-Cookie headers in network requests.</li>
+            <li><strong>Checking Security Flags:</strong> It verifies attributes like Secure, HttpOnly, and SameSite.</li>
+            <li><strong>Analysing Expiry and Persistence:</strong> The scanner detects long-lived cookies that track users over time.</li>
+            <li><strong>Detecting Third-Party Cookies:</strong> It identifies cookies set by external domains.</li>
+            <li><strong>Reviewing Cookie Policies:</strong> Some scans check whether the site provides clear cookie disclosures.</li>
+        </ul>
+
+        <h2>Why Websites Should Implement Strong Cookie Privacy Policies</h2>
+        <p>Responsible cookie management benefits both users and website owners. Key reasons to improve cookie privacy include:</p>
+        <ul>
+            <li><strong>Compliance with Regulations:</strong> Following the GDPR and CCPA requires transparent cookie handling.</li>
+            <li><strong>Enhanced User Trust:</strong> Privacy-aware visitors are likelier to engage with sites they perceive as secure.</li>
+            <li><strong>Reduced Security Risks:</strong> Proper cookie attributes prevent exploitation through attacks like XSS.</li>
+            <li><strong>Better Performance:</strong> Minimizing unnecessary cookies can improve website speed.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on cookie privacy and security, check out these resources:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">Mozilla Developer Network - HTTP Cookies</a></li>
+            <li><a href="https://www.cookiepro.com/" target="_blank">CookiePro - Cookie Compliance</a></li>
+            <li><a href="https://www.eff.org/issues/do-not-track" target="_blank">Electronic Frontier Foundation - Do Not Track</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

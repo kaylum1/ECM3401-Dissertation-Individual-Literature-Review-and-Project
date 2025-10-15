@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tracker Detection Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tracker Detection Scan - Understanding Web Tracking</h1>
+        <p>This page explains tracker detection scans, what it means when a scan does not detect anything, how users can be exposed, and the scientific process behind how these scans work.</p>
+
+        <h2>What is Web Tracking?</h2>
+        <p>In a short answer, web tracking is when information is collected on how people browse the internet, websites, advertisers, and other third-party services use this data for analytics, personalised ads, and content customisation.</p>
+
+        <p>Common tracking techniques include some of the following:</p>
+        <ul>
+            <li><strong>Cookies:</strong> These are tiny files placed on your device that record browsing behaviour and settings.</li>
+            <li><strong>Fingerprinting:</strong> Gathering distinctive browser and device details to single out users.</li>
+            <li><strong>Behavioural Logging:</strong> Capturing actions such as clicks, scrolling, and time spent on a page.</li>
+            <li><strong>Tracking Pixels:</strong> Invisible images that relay user activity back to a server.</li>
+        </ul>
+
+        <h2>What Happens When a Scan Doesn't Detect Any Trackers?</h2>
+        <p>If a tracker-detection scan reports zero trackers, it could mean:</p>
+        <ul>
+            <li>The site avoids cookies, fingerprinting, and other tracking scripts.</li>
+            <li>A strict Content Security Policy (CSP) will blocks un-authorised scripts from loading.</li>
+            <li>Sophisticated or obfuscated trackers slipped past the scan.</li>
+            <li>The site deliberately anonymises data and honours user privacy.</li>
+        </ul>
+        <p>Note: Clever tracking code can cloak itself, so a clean report is not a guarantee.</p>
+
+        <h2>How Users are Left Exposed to Trackers</h2>
+        <p>Tracking can lead to serious privacy concerns, including:</p>
+        <ul>
+            <li><strong>Loss of Privacy:</strong> Websites can track user behaviour across multiple domains.</li>
+            <li><strong>Targeted Advertising:</strong> Companies build profiles based on browsing habits.</li>
+            <li><strong>Data Leaks:</strong> If trackers collect personally identifiable information (PII), it may be exposed in breaches.</li>
+            <li><strong>Price changes:</strong> Some websites adjust prices dynamically based on tracking data.</li>
+            <li><strong>Reduced Online Anonymity:</strong> Browser fingerprinting allows websites to track users even if cookies are disabled.</li>
+        </ul>
+
+        <h2>How to Protect Yourself from Web Tracking</h2>
+        <p>Users can reduce tracking exposure by following these best practices:</p>
+        <ul>
+            <li><strong>Use Privacy-Focused Browsers:</strong> Firefox, Brave, and DuckDuckGo prioritise privacy.</li>
+            <li><strong>Install Tracker-Blocking Extensions:</strong> Use tools like Privacy Badger or uBlock Origin.</li>
+            <li><strong>Block Third-Party Cookies:</strong> Disable third-party cookies in browser settings.</li>
+            <li><strong>Use a VPN:</strong> VPNs can mask IP addresses, reducing location-based tracking.</li>
+            <li><strong>Enable “Do Not Track” (DNT):</strong> Some websites respect this browser setting.</li>
+            <li><strong>Disable JavaScript for Untrusted Sites:</strong> Many trackers rely on JavaScript execution.</li>
+        </ul>
+
+        <h2>The Science Behind Tracker Detection Scanning</h2>
+        <p>Tracker detection scanners analyse web pages using several techniques:</p>
+        <ul>
+            <li><strong>Network Traffic Analysis:</strong> The scanner intercepts outgoing network requests to detect third-party tracking domains.</li>
+            <li><strong>Cookie Inspection:</strong> It checks for cookies set by non-essential third-party services.</li>
+            <li><strong>JavaScript Analysis:</strong> The scanner examines loaded scripts for known tracking behaviours.</li>
+            <li><strong>Fingerprinting Detection:</strong> Identifies browser properties collected for tracking purposes.</li>
+            <li><strong>Behavioural Simulation:</strong> Simulates user interactions to detect hidden tracking mechanisms.</li>
+        </ul>
+
+        <h2>Why Websites Should Reduce Trackers</h2>
+        <p>Based on some different laws, websites should aim to limiting trackers benefits both site owners and visitors, and helps satisfy regulations such as:</p>
+        <ul>
+            <li><strong>General Data Protection Regulation (GDPR):</strong> Demands explicit consent before tracking.</li>
+            <li><strong>California Consumer Privacy Act (CCPA):</strong> Gives users greater control over their data.</li>
+            <li><strong>Privacy and Electronic Communications Directive (PECD):</strong> Governs cookie usage in the EU.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on web tracking and privacy, check out these resources:</p>
+        <ul>
+            <li><a href="https://www.eff.org/issues/do-not-track" target="_blank">Electronic Frontier Foundation - Do Not Track</a></li>
+            <li><a href="https://panopticlick.eff.org/" target="_blank">EFF Panopticlick - Test Your Browser’s Privacy</a></li>
+            <li><a href="https://disconnect.me/" target="_blank">Disconnect - Tracker Blocking Tool</a></li>
+        </ul>
+
+       <!--  <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

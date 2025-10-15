@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Server Offline</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #F44336;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    a.button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Server is Offline</h1>
+  <p>The scan server can’t be reached right now.<br>Please try again in a moment.</p>
+  <p>To fix the issue:
+      1. Relaod the webpage, if the error persists, go to next step.
+      2. Go to the following diretcory: cd extension/server
+      2. Type the follwoing code to start or restart the server: python server.py 
+      2. on chromium reaload the web page.
+  </p>
+  <a class="button" href="../popup.html">Back to Scanner</a>
+</body>
+</html>

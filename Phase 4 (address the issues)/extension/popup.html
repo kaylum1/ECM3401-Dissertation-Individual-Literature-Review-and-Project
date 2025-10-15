@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Scan Summary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Status banner (always shown) -->
+    <div id="statusContainer">
+      <div id="statusMessage">nothing changed</div>
+      <button id="retryBtn">INFO</button>
+    </div>
+
+    <!-- URL Display -->
+    <div id="urlText" class="url-text">
+      <span>🔗</span>
+      <a id="urlLink" href="#" target="_blank">Loading…</a>
+    </div>
+
+    <!-- Score Circle -->
+    <div class="score-circle" id="scoreCircle">
+      <div class="spinner" id="spinner"></div>
+      <span id="scoreText"></span>
+    </div>
+
+    <!-- Failure Tally -->
+    <div id="failureTally"></div>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+      <button id="securityBtn">Security</button>
+      <button id="privacyBtn">Privacy</button>
+      <button id="metricsBtn">Metrics</button>
+      <button id="logsPage">Logs</button>
+      <button id="settingsBtn">Settings</button>
+      <button id="educationBtn">Edu</button>
+      <button id="helpBtn">Help</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

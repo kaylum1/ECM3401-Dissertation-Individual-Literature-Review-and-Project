@@ -1,0 +1,102 @@
+
+5 feb - 10 change the whole structure as i could not add my own sql databse\
+11 - have my own sql database and have added\
+12 - reploshing different scans and have added privacy scans \
+13- adding info when there is a bad score - first will be red then gonna add info on it \
+14- added the setup of new tabs that have evern more information - more needs to be done \
+14 - help strcture be better, automated the server database and scans and now when going on new tabe upadted automatically, also only upadted database after a week\
+14- created the fram work to have tabs open for scan with poor result and now they need poplulating with information \
+\
+14 created an XAmap and DVWA enviroment for tesing the different scans work correctly\
+
+14 creating dumby websites to make sure that my websites works corretcly 
+15. created a templates folder and not easier tot recaret webistes with seducirty issues 
+
+
+17 i have addeed features such as vpn and ad blocker 
+
+
+18 created a new fully dledge scan and had to reasbbombe the database to first and make sure they wrre paossive so they are legal
+
+19 gave functnaility to the cookies and and ad blocker 
+
+20 created fake webpage that will purppsley fail all the scan 
+
+21 cereated the new educatoanla
+
+22 created a new scaoring matrix that will allow me to adjust the weights of the different scans 
+
+
+24 start of adversal porject here 
+    - will create different weigjt configurations that user will be able to chose from 
+
+24 created a metrics page where poeple can pick the weights based on what they want 
+
+24 - set up the weight with the reason stated below 
+
+
+-----------------------------------------------
+PRECONFIGURED_WEIGHTS = {
+    "normal": [8, 7, 5, 5, 9, 9, 7, 5, 3, 4, 7, 5, 8, 8, 8, 7, 7, 7, 5, 7, 5, 7],
+    ...
+}
+XSS (8) & Vulnerability (7): These are high‐risk vulnerabilities.
+Privacy Tracker (5) & Third-party Script (5): Moderately important in normal use.
+SSL (9) & SQL (9): Critical for secure communications and backend safety.
+Security Headers (7): Important for overall site security.
+Privacy Audit (5): Important but balanced with other concerns.
+Performance (3): Lower importance in a security/privary context.
+Outdated (4): Moderate importance.
+Mixed Content (7): Critical to avoid insecure content.
+Directory (5): Moderate risk.
+CSRF (8), CSP (8), HTTPS (8): High importance to prevent attacks.
+Third-party Data Collection (7): Important for privacy.
+Tracker Detection (7) & Fingerprinting (7): Privacy issues.
+Referrer & DNT (5): Moderate.
+Data Leakage (7): High risk.
+DNT (5): Moderate.
+Cookie (7): Important for session and privacy.
+
+-----------------------------------------------
+Security Profile
+
+Here the focus is on classic security vulnerabilities, so scans that check for XSS, SQL injection, SSL, headers, and CSRF are given higher weights. Privacy-related scans receive lower emphasis.
+
+"security": [10, 10, 2, 2, 10, 10, 9, 2, 2, 5, 9, 7, 10, 10, 10, 3, 3, 3, 2, 8, 2, 5],
+XSS (10) & Vulnerability (10): Maximum importance.
+Privacy Tracker (2) & Third-party Script (2): Lower because focus is on security flaws.
+SSL (10) & SQL (10): Critical.
+Headers (9): Very important.
+Privacy Audit (2): Lower priority.
+Performance (2): Minimal in a security profile.
+Outdated (5): Moderate.
+Mixed (9): High priority.
+Directory (7): Important.
+CSRF (10), CSP (10), HTTPS (10): Very high.
+Third-party Data Collection (3), Tracker Detection (3), Fingerprinting (3): Lower.
+Referrer & DNT (2): Minimal.
+Data Leakage (8): High.
+DNT (2): Minimal.
+Cookie (5): Moderate.
+
+
+-----------------------------------------------
+Privacy Profile
+
+Privacy-related scans are emphasized; vulnerability checks not directly related to privacy get lower weights.
+
+"privacy": [3, 3, 10, 10, 4, 4, 3, 10, 2, 2, 3, 3, 3, 3, 4, 10, 10, 10, 10, 8, 8, 10],
+XSS (3) & Vulnerability (3): Lower emphasis since they’re less privacy-specific.
+Privacy Tracker (10) & Third-party Script (10): Maximum weight.
+SSL (4) & SQL (4): Important, but not as much as privacy concerns.
+Headers (3): Lower priority.
+Privacy Audit (10): Maximum importance.
+Performance (2) & Outdated (2): Minimal.
+Mixed (3) & Directory (3): Low.
+CSRF (3), CSP (3): Lower.
+HTTPS (4): Moderate.
+Third-party Data Collection (10), Tracker Detection (10), Fingerprinting (10): Critical for privacy.
+Referrer & DNT (10): Maximum (since leaking referrer info or not respecting DNT is a privacy risk).
+Data Leakage (8): High.
+DNT (8): High.
+Cookie (10): Maximum, as cookies are a major privacy concern.

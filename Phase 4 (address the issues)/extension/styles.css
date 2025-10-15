@@ -1,0 +1,314 @@
+/* ===== Base ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 15px;
+  color: #333;
+}
+
+/* ===== Container ===== */
+.container {
+  width: 250px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+  text-align: center;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+h1 { font-size: 20px; }
+h2 { font-size: inherit; }
+
+/* ===== Forms & Labels ===== */
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===== Buttons (General) ===== */
+button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: none;
+  flex: 0 0 calc((100% - 16px)/3);
+  max-width: calc((100% - 16px)/3);
+}
+button:hover {
+  background-color: #005fa3;
+}
+
+/* ===== Back Button ===== */
+#backBtn {
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* ===== Popup-Specific ===== */
+
+/* Status banner */
+#statusContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #ccc;
+  color: #fff;
+}
+#statusContainer.error {
+  background-color: #F44336;
+}
+#statusMessage {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+#retryBtn {
+  display: none;
+  margin-left: 8px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #c0392b;
+  color: #fff;
+  border-radius: 4px;
+}
+#retryBtn:hover {
+  background-color: #a93226;
+}
+
+/* URL pill */
+.url-text {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.url-text span {
+  flex-shrink: 0;
+}
+.url-text a {
+  margin-left: 6px;
+  color: #0077cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+.url-text a:hover {
+  text-decoration: underline;
+}
+
+/* Score circle */
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  border: 5px solid #ccc;             /* grey border now */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Hide scoreText until JS replaces the spinner */
+#scoreText {
+  display: none;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(0,0,0,0.1);
+  border-top-color: #09f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Failure tally: always visible, styled as a pill */
+#failureTally {
+  display: block;
+  margin: -10px auto 20px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ===== Button Container Layout ===== */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ===== Privacy & Security Pages ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+.back-btn {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.scan-item {
+  margin-bottom: 10px;
+}
+.scan-header {
+  font-size: 16px;
+  cursor: pointer;
+  background: #e3e3e3;
+  padding: 10px;
+  border-radius: 5px;
+}
+.scan-header:hover {
+  background: #d1d1d1;
+}
+.scan-details {
+  margin-left: 10px;
+  padding: 5px;
+}
+.hidden {
+  display: none;
+}
+.low-score,
+.low-score-message {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ===== Settings Page ===== */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+.setting-name {
+  font-size: 16px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 28px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+
+
+
+
+/* Improve scan button links to look like bubble buttons */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Each button styled as a card */
+.button-container a {
+  flex: 1 1 250px; /* Minimum width 250px, grow as needed */
+  max-width: 300px; /* Optional, cap max width */
+  height: 100px; /* FIX the height */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #e0f0ff; /* light blue */
+  color: #003366; /* dark blue */
+  padding: 12px;
+  margin: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.button-container a:hover {
+  background-color: #c2e0ff;
+  color: #001f4d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Do Not Track (DNT) Support Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Do Not Track (DNT) Support Scan - Understanding Online Privacy</h1>
+        <p>This page will break down and explains Do Not Track (DNT) support scans, what it means when a scan does not detect anything, how users can be exposed, and the scientific process behind how these scans work.</p>
+
+        <h2>What is Do Not Track (DNT)?</h2>
+        <p>Do Not Track (DNT) is a browser feature that lets people signal to websites that they prefer not to be tracked. When switched on, the browser adds the DNT: 1 HTTP header to each request, asking sites not to collect or share user information for advertising or analytics.</p>
+
+        <p>Although DNT was proposed as a web standard, it is not legally binding, and many sites overlook—or deliberately ignore the header.</p>
+
+        <p>While DNT was initially designed as a web standard, it is not legally enforceable, and many websites ignore it.</p>
+
+        <h2>What Happens When a DNT Support Scan Shows Nothing?</h2>
+        <p>If a scan does not detect Do Not Track support, it may indicate:</p>
+        <ul>
+            <li>The website does not recognise or respect the DNT header.</li>
+            <li>The website collects and shares user data regardless of user preferences.</li>
+            <li>The website relies on third-party trackers that do not adhere to DNT.</li>
+        </ul>
+        <p>A lack of DNT support means the website may track user behaviour even if users have opted out through their browser settings.</p>
+
+        <h2>How Users are Left Exposed Without DNT Support</h2>
+        <p>When websites ignore Do Not Track requests, users may face several risks:</p>
+        <ul>
+            <li><strong>Behavioral Tracking:</strong> Websites can track your browsing activity across different sites.</li>
+            <li><strong>Targeted Advertising:</strong> Your data may be shared with advertisers, leading to invasive personalized ads.</li>
+            <li><strong>Privacy Violations:</strong> Websites may store and analyze personal data without user consent.</li>
+            <li><strong>Data Breaches:</strong> If collected data is not securely stored, it may be exposed in breaches.</li>
+            <li><strong>Profiling:</strong> Companies can build detailed digital profiles of users, including their habits, preferences, and demographics.</li>
+        </ul>
+
+        <h2>How to Protect Yourself from Online Tracking</h2>
+        <p>Because many sites ignore DNT, users should adopt extra safeguards:</p>
+        <ul>
+            <li><strong>Use Privacy-Focused Browsers:</strong> Firefox, Brave, or Tor Browser add stronger tracking defences.</li>
+            <li><strong>Install Tracker-Blocking Extensions:</strong> Add-ons such as Privacy Badger or uBlock Origin block tracking scripts.</li>
+            <li><strong>Disable Third-Party Cookies:</strong> Browser settings can block cookies from external domains.</li>
+            <li><strong>Use a VPN:</strong> A virtual private network masks your IP address from trackers.</li>
+            <li><strong>Regularly Clear Cookies:</strong> Deleting stored cookies removes long-term tracking data.</li>
+            <li><strong>Opt Out of Data Collection:</strong> Some sites let you refine tracking choices in privacy settings.</li>
+        </ul>
+
+        <h2>The Science Behind Do Not Track Scanning</h2>
+        <p>Do Not Track scanners check for DNT support by analyzing HTTP headers and website responses. The process includes:</p>
+        <ul>
+            <li><strong>Sending a DNT Request:</strong> The scanner makes an HTTP request that includes the DNT: 1 header.</li>
+            <li><strong>Monitoring Server Response:</strong> It checks whether the site acknowledges or ignores the header.</li>
+            <li><strong>Analysing Privacy Policies:</strong> Some tools examine the site’s privacy notice for DNT language.</li>
+            <li><strong>Checking Tracking Behaviour:</strong> The scanner looks for tracking scripts that remain active.</li>
+        </ul>
+
+        <h2>Why Websites Should Support Do Not Track</h2>
+        <p>Although DNT is voluntary, websites that respect it benefit in several ways:</p>
+        <ul>
+            <li><strong>Building User Trust:</strong> Transparency about tracking improves credibility.</li>
+            <li><strong>Compliance with Privacy Laws:</strong> Supporting DNT aligns with GDPR, CCPA, and other data protection regulations.</li>
+            <li><strong>Reducing Security Risks:</strong> Collecting less data minimizes exposure in case of a breach.</li>
+            <li><strong>Improving User Experience:</strong> Some users prefer websites that do not track them for advertising purposes.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on Do Not Track and privacy protection, check out these resources:</p>
+        <ul>
+            <li><a href="https://www.eff.org/issues/do-not-track" target="_blank">Electronic Frontier Foundation - Do Not Track</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT" target="_blank">MDN - DNT Header Documentation</a></li>
+            <li><a href="https://globalprivacycontrol.org/" target="_blank">Global Privacy Control - Alternative to DNT</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

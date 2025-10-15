@@ -1,0 +1,47 @@
+python -m unittest Security_scans.Security_scans_tests.Passive_CSP_Security_Scanner_test
+
+
+python -m unittest Security_scans.Security_scans_tests.Passive_CSRF_Security_Scanner_test
+
+
+python -m unittest Security_scans.Security_scans_tests.Passive_Directory_Listing_Security_Scanner_test - cnnot fucking import module 
+
+
+
+
+python -m unittest Security_scans.Security_scans_tests.Passive_HTTPS_Scanner_test.           large error 
+
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_Mixed_Content_Detection_Scanner_test.py
+
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_Outdated_Plugin_Security_Scanner_test.py
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_Performance_and_Configuration_Analysis_Scanner_test.py.  not wokring
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_Security_Headers_Scanner_test.py
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_SQL_Injection_Security_Scanner_test.py
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_SSL_TLS_Certificate_Validation_Scanner_test.py
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_Vulnerability_Cross_Reference_Scanner_test.py
+
+
+
+python -m unittest Security_scans/Security_scans_tests/Passive_XSS_Security_Scanner_test.py
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Third-Party Data Collection Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Third-Party Data Collection Scan - Understanding Web Privacy</h1>
+        <p>This page explains third-party data collection, what it means when a scan does not detect it, how users can be exposed, and the scientific process behind how these scans work.</p>
+
+        <h2>What is Third-Party Data Collection?</h2>
+        <p>Many sites rely on outside services—analytics platforms, ad networks, social-media widgets—that gather visitor data. These third parties follow users across multiple domains to build behavioural and demographic profiles.</p>
+
+        <p>Information a third party might capture includes:</p>
+        <ul>
+            <li>Browsing history and on-page interactions</li>
+            <li>IP addresses and approximate location</li>
+            <li>Device details and browser fingerprints</li>
+            <li>Personally Identifiable Information (PII) if safeguards are weak</li>
+        </ul>
+
+        <h2>What Happens When a Scan Doesn’t Detect Third-Party Data Collection?</h2>
+        <p>If a scan turns up no third-party trackers, it usually implies:</p>
+        <ul>
+            <li>The site omits analytics, ad tags, or embedded third-party widgets.</li>
+            <li>Blocking rules or content-security settings successfully stop outgoing tracker requests.</li>
+            <li>No known tracker domains issue network calls during the test session.</li>
+        </ul>
+        <p>Some trackers are built to evade discovery, so additional investigation may still be warranted.</p>
+
+        <h2>How Users are Left Exposed to Third-Party Data Collection</h2>
+        <p>Sites that permit third-party tracking can compromise visitors in several ways:</p>
+        <ul>
+            <li><strong>Privacy Invasion:</strong> Detailed user profiles created without consent.</li>
+            <li><strong>Targeted Advertising:</strong> Cross-site tracking fuels personalised ads.</li>
+            <li><strong>Data Breaches:</strong> If a third-party database is hacked, user data leaks.</li>
+            <li><strong>Cross-Site Tracking:</strong> Activity monitored across many domains, shrinking anonymity.</li>
+            <li><strong>Regulatory Risks:</strong> Collecting data without clear consent can break laws like GDPR or CCPA.</li>
+        </ul>
+
+        <h2>How to Protect Yourself from Third-Party Tracking</h2>
+        <p>To shrink the footprint of third-party collectors, consider:</p>
+        <ul>
+            <li><strong>Browser Extensions:</strong> Try to install privacy add-ons such as <a href="https://privacybadger.org/" target="_blank">Privacy Badger</a> or <a href="https://ublockorigin.com/" target="_blank">uBlock Origin</a> to block tracker domains.</li>
+            <li><strong>Built-In Privacy Settings:</strong> Use browsers with strong tracking protection (Firefox, Brave, Safari).</li>
+            <li><strong>Private Browsing or VPNs:</strong> Settings like incognito modes reduce cookie storage; VPNs mask IP addresses.</li>
+            <li><strong>Disable Third-Party Cookies:</strong> Most browsers now allow a full block on external cookies.</li>
+            <li><strong>Check Privacy Policies:</strong> Review a site’s statement to understand what data it shares.</li>
+        </ul>
+
+        <h2>The Science Behind Third-Party Data Collection Scanning</h2>
+        <p>Third-party data collection scanning works by analysing network requests and embedded scripts on a webpage. The process includes:</p>
+        <ul>
+            <li><strong>Script and Network Analysis:</strong> The scanner can inspects website source code for tracking scripts and verifies whether requests are made to third-party domains.</li>
+            <li><strong>Cookie Inspection;</strong> It examines cookies stored in the browser to identify third-party tracking mechanisms.</li>
+            <li><strong>Behavioural Analysis:</strong> The scanner interacts with the site to detect hidden tracking scripts that load dynamically.</li>
+            <li><strong>Content Security Policy (CSP) Evaluation:</strong> Websites with properly configured CSPs restrict unauthorised third-party data sharing.</li>
+            <li><strong>Fingerprinting Detection:</strong> Some scanners analyze whether the website uses browser fingerprinting techniques, which track users without traditional cookies.</li>
+        </ul>
+
+        <h2>Why Websites Should Minimise Third-Party Data Collection</h2>
+        <p>Reducing reliance on external trackers benefits site owners by doing the following:</p>
+        <ul>
+            <li><strong>Improving User Trust:</strong> Visitors prefer privacy-respecting pages.</li>
+            <li><strong>Complying with Laws:</strong> Less risk of violating data-protection regulations.</li>
+            <li><strong>Lowering Security Exposure:</strong> Fewer outside scripts mean fewer breach pathways.</li>
+            <li><strong>Boosting Performance:</strong> Cutting superfluous trackers often speeds page loads.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on third-party data collection and web privacy, check out these resources:</p>
+        <ul>
+            <li><a href="https://www.eff.org/pages/online-tracking" target="_blank">Electronic Frontier Foundation - Online Tracking</a></li>
+            <li><a href="https://panopticlick.eff.org/" target="_blank">EFF Panopticlick - Test Your Browser's Privacy</a></li>
+            <li><a href="https://www.ghostery.com/" target="_blank">Ghostery - Privacy-Focused Browsing</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

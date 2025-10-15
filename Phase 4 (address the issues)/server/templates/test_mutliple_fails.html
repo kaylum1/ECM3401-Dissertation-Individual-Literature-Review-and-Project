@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insecure Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+    }
+    #failInfo {
+      display: none;
+      padding: 1em;
+      background-color: #f8d7da;
+      color: #721c24;
+      margin-top: 1em;
+      border: 1px solid #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+  <h1>Insecure Test Page</h1>
+  <p>This page is intentionally designed for testing purposes to trigger a low privacy score (1/10) or a scan failure.</p>
+
+  <!-- Insecure cookie set via JavaScript -->
+  <script>
+    document.cookie = "testCookie=bad; path=/;";
+  </script>
+
+  <!-- Simulated third-party tracker script (expected to fail or trigger a scan alert) -->
+  <script>
+    var trackerScript = document.createElement('script');
+    trackerScript.src = "http://tracker.example.com/fake-tracker.js";
+    trackerScript.onerror = function() {
+      console.log("Tracker script failed to load, as expected for test purposes.");
+    };
+    document.head.appendChild(trackerScript);
+  </script>
+
+  <!-- Simulated fingerprinting script -->
+  <script>
+    console.log("Simulated fingerprinting data collection...");
+    var fingerprintData = {
+      userAgent: navigator.userAgent,
+      language: navigator.language,
+      platform: navigator.platform,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+    };
+    console.log("Fingerprint Data:", fingerprintData);
+  </script>
+
+  <!-- Script to simulate scan failure by revealing a hidden info link -->
+  <script>
+    function simulateScanFailure() {
+      var infoLink = document.getElementById("failInfo");
+      if (infoLink) {
+        infoLink.style.display = "block";
+      }
+    }
+    // Simulate scan failure after a short delay
+    setTimeout(simulateScanFailure, 1000);
+  </script>
+
+  <!-- Hidden info section that appears on scan failure -->
+  <div id="failInfo">
+    <strong>Privacy Warning:</strong> Your privacy scan score is low (1/10).
+    <a href="https://example.com/privacy-info" target="_blank">Click here</a> for more information.
+  </div>
+</body>
+</html>
+
+
+
+
+<!--http://localhost:8000/test_mutliple_fails-->

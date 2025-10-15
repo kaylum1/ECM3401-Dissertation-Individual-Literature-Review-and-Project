@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mixed Content Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mixed Content Scan - Understanding Insecure Resource Loading</h1>
+        <p>This page explains Mixed Content scans, what it means when a scan does not detect any issues, how users can be affected by mixed content, and the process behind how these scans work.</p>
+
+        <h2>What is Mixed Content?</h2>
+        <p><strong>Mixed Content</strong> occurs when a web page loaded over a secure HTTPS connection contains resources (such as images, scripts, or stylesheets) that are loaded over an insecure HTTP connection. This inconsistency can compromise the overall security of the site.</p>
+        <p>Mixed content generally falls into two categories:</p>
+        <ul>
+            <li><strong>Passive Mixed Content:</strong> Involves non-interactive resources like images or videos that may not directly affect the page’s functionality but can still lead to privacy issues.</li>
+            <li><strong>Active Mixed Content:</strong> Involves executable resources such as scripts and iframes that can be exploited to execute malicious code, posing a greater risk.</li>
+        </ul>
+
+        <h2>What Happens When a Mixed Content Scan Shows Nothing?</h2>
+        <p>If a scan does not detect any mixed content vulnerabilities, it may indicate:</p>
+        <ul>
+            <li>All resources are consistently loaded over secure HTTPS connections.</li>
+            <li>External content providers have updated their endpoints to support HTTPS.</li>
+            <li>The website's configuration effectively prevents the inclusion of insecure resources.</li>
+            <li>The scan might not capture certain dynamic or edge-case scenarios where mixed content could be introduced.</li>
+        </ul>
+        <p>Even with a clean scan, it’s important to remain vigilant as configuration errors or future changes could introduce vulnerabilities.</p>
+
+        <h2>How Users are Left Exposed Without Proper Mixed Content Mitigation</h2>
+        <p>Without addressing mixed content issues, users may encounter:</p>
+        <ul>
+            <li><strong>Man-in-the-Middle Attacks:</strong> Attackers can intercept and alter insecure HTTP traffic, compromising data integrity.</li>
+            <li><strong>Data Tampering:</strong> Insecurely loaded resources can be modified, leading to content alterations or malicious injections.</li>
+            <li><strong>Browser Warnings:</strong> Modern browsers often display security warnings, undermining user trust in the website.</li>
+        </ul>
+
+        <h2>How to Address Mixed Content Issues</h2>
+        <p>To ensure complete security, website administrators should:</p>
+        <ul>
+            <li><strong>Enforce HTTPS:</strong> Ensure that all resources, both internal and external, are loaded via HTTPS.</li>
+            <li><strong>Update Resource Links:</strong> Replace any HTTP URLs with their HTTPS equivalents.</li>
+            <li><strong>Implement a Content Security Policy (CSP):</strong> Use CSP directives to block or upgrade insecure requests.</li>
+            <li><strong>Conduct Regular Audits:</strong> Periodically scan and monitor your website to promptly identify and fix any mixed content issues.</li>
+        </ul>
+
+        <h2>The Science Behind Mixed Content Scanning</h2>
+        <p>Mixed Content scanners operate by:</p>
+        <ul>
+            <li><strong>Analyzing Resource URLs:</strong> Checking all linked resources to ensure they use HTTPS.</li>
+            <li><strong>Simulating User Interactions:</strong> Observing how dynamic content loads and ensuring it does not introduce insecure requests.</li>
+            <li><strong>Verifying Browser Behavior:</strong> Testing if modern browsers would flag or block mixed content on the page.</li>
+            <li><strong>Evaluating Server Configurations:</strong> Ensuring that redirections or protocol upgrades are correctly enforced.</li>
+        </ul>
+
+        <h2>Why Websites Should Resolve Mixed Content Issues</h2>
+        <p>Eliminating mixed content is crucial for:</p>
+        <ul>
+            <li><strong>Maintaining User Trust:</strong> Consistently secure pages reassure users about the safety of their data.</li>
+            <li><strong>Preventing Security Breaches:</strong> Secure resource loading reduces the risk of interception and tampering.</li>
+            <li><strong>Ensuring Data Integrity:</strong> Protecting the content from unauthorized modifications helps maintain website reliability.</li>
+            <li><strong>Improving Browser Compatibility:</strong> Avoiding mixed content warnings leads to a smoother user experience.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For additional information on mixed content and securing your website, explore these resources:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content" target="_blank">MDN - Mixed Content</a></li>
+            <li><a href="https://www.owasp.org/index.php/Mixed_Content" target="_blank">OWASP - Mixed Content</a></li>
+            <li><a href="https://content-security-policy.com/mixed-content/" target="_blank">Mixed Content Guide</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

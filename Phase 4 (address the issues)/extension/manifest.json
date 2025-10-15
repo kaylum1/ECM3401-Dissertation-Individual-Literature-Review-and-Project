@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Phase 4",
+  "version": "1.0",
+  "description": "Automatically logs URLs and checks if the page uses HTTPS.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "webNavigation",
+    "declarativeNetRequest",
+    "proxy"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "HTTPS Scanner"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "security.html",
+        "privacy.html",
+        "security.js",
+        "privacy.js",
+        "info_pages/*.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+
+  

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSL/TLS Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SSL/TLS Scan - Understanding Website Security</h1>
+        <p>This page breaks down and will aim to explains what it means when a website fails an SSL/TLS scan, how users can be exposed, and the scientific process behind how these scans work.</p>
+    
+        <h2>What is SSL/TLS?</h2>
+        <p>SSL (Secure Sockets Layer) and its modern successor TLS (Transport Layer Security) are encryption protocols that shield the traffic between a browser and a web server. By scrambling the data in transit, they stop eavesdroppers from reading or tampering with sensitive details such as passwords or card numbers.</p>
+    
+        <h2>What Happens When a Scan Doesn't Detect SSL/TLS?</h2>
+        <p>If a scanner comes up empty, the site likely:</p>
+        <ul>
+            <li>Sends traffic in plain text, inviting man-in-the-middle snooping.</li>
+            <li>Provides no reliable identity check, raising the odds of phishing or spoofing.</li>
+            <li>Lets attackers intercept logins, payments, or other personal information.</li>
+        </ul>
+        <p>Modern browsers label these pages “Not Secure,” warning visitors before they type anything.</p>
+    
+        <h2>How Users are Left Exposed</h2>
+        <p>Without SSL/TLS, visitors face threats such as:</p>
+        <ul>
+            <li>Packet sniffing – unencrypted data on public Wi-Fi is easy to read.</li>
+            <li>Session hijacking – thieves can steal a session cookie and slip into your account.</li>
+            <li>Data tampering – attackers may alter pages or inject malicious code.</li>
+            <li>Credential theft – passwords and banking details travel the wire in plain view.</li>
+        </ul>
+    
+        <h2>How to Protect Yourself</h2>
+        <ul>
+            <li>Always look for “https://” (and the padlock) before submitting data.</li>
+            <li>Enable your browser’s HTTPS-only mode to avoid accidental HTTP visits.</li>
+            <li>Always try and use a VPN on public networks to wrap everything in encryption.</li>
+            <li>Install extensions like HTTPS Everywhere to auto-upgrade weak connections.</li>
+        </ul>
+    
+        <h2>The Science Behind SSL/TLS Scanning</h2>
+        <p>SSL/TLS scanning works by sending requests to a website’s server to check its security status. The process includes the following steps:</p>
+        <ul>
+            <li>1. Attempts a handshake by attempting tries to start an SSL/TLS session to see if the server supports it.</li>
+            <li>2. Checks the certificate to confirm it’s valid, properly signed, and from a trusted CA.</li>
+            <li>3. Verifies protocol versions by ensuring the site runs TLS 1.2 or 1.3, not outdated SSL.</li>
+            <li>4. Evaluates cypher suites, by flagging weak algorithms (e.g., RC4, SHA-1) and looks for strong ones.</li>
+            <li>5. Tests HSTS can sees whether the server forces HTTPS to block downgrade attacks.</li>
+        </ul>
+    
+        <h2>Why SSL/TLS is Essential for Websites</h2>
+        <p>Website owners should implement SSL/TLS for the following reasons:</p>
+        <ul>
+            <li>Security: encrypts data, stopping prying eyes.</li>
+            <li>Trust: The padlock icon reassures users that the site is legitimate.</li>
+            <li>SEO boost: search engines favor HTTPS pages.</li>
+            <li>Compliance: many rules (GDPR, PCI-DSS, etc.) require encrypted transport.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on SSL/TLS security, check out these resources:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security" target="_blank">Mozilla Developer Network - TLS</a></li>
+            <li><a href="https://www.ssl.com/faqs/what-is-ssl-tls/" target="_blank">SSL.com - What is SSL/TLS?</a></li>
+            <li><a href="https://letsencrypt.org/" target="_blank">Let's Encrypt - Free SSL Certificates</a></li>
+        </ul>
+
+       <!--  <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+chrome://extensions/
+
+
+
+
+✅ / ❌	
+URLs	                             Broken Authentication Scan	    Cross Site Scripting Scan	CRRF Scan	    Directory Listing Check Scan	   HTTP Scan	   Open Redirect Check Scan	   Scanner Cookie Security Check	    Security Headers Checker	   SQL Injection Scan	      SSL/TLS Configuration Scan	      Cookie Privacy Scan	           Do Not Track Support Scan	   Privacy Policy Scan	        Third Party Data Collection Scan	     Tracker Detection Scan
+
+https://www.netflix.com/gb/                                                                                                                                                                                                                 
+
+
+http://example.com/                                                                                                                                    ❌                                                                                                   ❌                                                                                          ❌                                 ❌                                                               ❌
+
+
+
+
+URL 2	
+URL 3	
+
+
+
+
+
+URLs                                | Broken Authentication Scan | Cross Site Scripting Scan | CRRF Scan   | Directory Listing Check Scan   | HTTP Scan | Open Redirect Check Scan    | Scanner Cookie Security Check      | Security Headers Checker  | SQL Injection Scan  | SSL/TLS Configuration Scan    | Cookie Privacy Scan     | Do Not Track Support Scan  | Privacy Policy Scan  | Third Party Data Collection Scan    | Tracker Detection Scan
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                    | ✅ / ❌                     | ✅ / ❌                    | ✅ / ❌    | ✅ / ❌                        | ✅ / ❌    | ✅ / ❌                     | ✅ / ❌                            | ✅ / ❌                    | ✅ / ❌             | ✅ / ❌                        | ✅ / ❌                | ✅ / ❌                     | ✅ / ❌              | ✅ / ❌                              | ✅ / ❌
+
+https://www.netflix.com/gb/         |                             | ✅ / ❌                    | ✅ / ❌    | ✅ / ❌                        | ✅ / ❌    | ✅ / ❌                     | ✅ / ❌                            | ✅ / ❌                    | ✅ / ❌             | ✅ / ❌                        | ✅ / ❌                | ✅ / ❌                     | ✅ / ❌              | ✅ / ❌                              | ✅ / ❌
+                      

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSP Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSP Scan - Understanding Content Security Policy</h1>
+        <p>This page will explain what Content Security Policy (CSP) scans do. What it means when a scan does detect any vulnerabilities, how users can be exposed without proper CSP, and the scientific process behind how these scans work.</p>
+    
+        <h2>What is Content Security Policy (CSP)?</h2>
+        <p>Content Security Policy (CSP) is a security standard that helps prevent from threats like cross-site scripting (XSS), data injection, and other code execution attacks by allowing website administrators to control the sources from which content can be loaded.</p>
+    
+        <p>CSP typically focuses on:</p>
+        <ul>
+            <li><strong>Inline Scripts:</strong> Blocking unauthorised inline script execution.</li>
+            <li><strong>External Resources:</strong> Restricting the domains from which scripts, styles, images, and other resources are loaded.</li>
+            <li><strong>Data Injection:</strong> Preventing the inclusion of malicious content in web pages.</li>
+        </ul>
+    
+        <h2>What Happens When a CSP Scan Shows Nothing?</h2>
+        <p>If a scan does not detect CSP vulnerabilities, it may indicate:</p>
+        <ul>
+            <li>The website has correctly implemented CSP headers with strict rules.</li>
+            <li>Trusted resource domains are properly whitelisted, minimising the exposure to malicious content.</li>
+            <li>Inline scripts and dynamic content are managed securely using nonces or hashes.</li>
+            <li>The scanner might not catch some of the deeper, logic-based flaws that require more contextual analysis.</li>
+        </ul>
+        <p>Nonetheless, a clean scan result does not guarantee complete security as misconfigurations in the CSP can still leave room for potential exploits.</p>
+    
+        <h2>How Users are Left Exposed Without CSP Protection</h2>
+        <p>Without proper CSP implementation, websites are vulnerable to:</p>
+        <ul>
+            <li><strong>Cross-Site Scripting (XSS):</strong> Attackers can inject and execute malicious scripts in trusted web pages.</li>
+            <li><strong>Data Injection:</strong> Unauthorized content might be loaded, potentially leading to data breaches.</li>
+            <li><strong>Content Hijacking:</strong> Malicious alterations to webpage content can mislead users.</li>
+            <li><strong>Credential Theft:</strong> Injected scripts may capture sensitive user data.</li>
+        </ul>
+    
+        <h2>How to Enhance Security with CSP</h2>
+        <p>Web administrators can take the following steps to strengthen security with CSP:</p>
+        <ul>
+            <li><strong>Implement Strict CSP Headers:</strong> By defining and enforce trusted sources for scripts, styles, images, and other resources.</li>
+            <li><strong>Utilise Nonces or Hashes:</strong> these security measures help authorise only approved inline scripts to execute.</li>
+            <li><strong>Regularly Review and Update Policies:</strong> Adjust CSP rules as new content or trusted sources are introduced.</li>
+            <li><strong>Monitor CSP Violations:</strong> Use reporting tools to identify and remediate potential policy misconfigurations.</li>
+            <li><strong>Educate Development Teams:</strong> Ensure developers understand CSP best practices and its importance in overall security and implement them.</li>
+        </ul>
+    
+        <h2>The Science Behind CSP Scanning</h2>
+        <p>CSP scanners analyse web applications to detect weaknesses in their content security policies. The process includes:</p>
+        <ul>
+            <li><strong>Inspecting HTTP Headers:</strong> Checking for the presence and accuracy of the CSP header.</li>
+            <li><strong>Validating Resource Directives:</strong> Ensuring that only trusted domains are authorized to load resources.</li>
+            <li><strong>Testing Inline and Dynamic Scripts:</strong> Verifying that inline scripts are controlled via nonces or hashes.</li>
+            <li><strong>Simulating Injection Attempts:</strong> Mimicking attack scenarios to see if unauthorized content can be executed.</li>
+        </ul>
+    
+        <h2>Why Websites Should Implement CSP</h2>
+        <p>A robust Content Security Policy is crucial for:</p>
+        <ul>
+            <li><strong>Mitigating XSS Attacks:</strong> Reducing the risk of unauthorised script execution.</li>
+            <li><strong>Protecting Sensitive Data:</strong> Preventing the unauthorised loading of malicious content.</li>
+            <li><strong>Enhancing Overall Security:</strong> Adding a vital layer of defence against injection and content hijacking attacks.</li>
+            <li><strong>Building User Trust:</strong> Secure websites promote confidence and safe engagement from users.</li>
+            <li><strong>Regulatory Compliance:</strong> Meeting data protection standards and industry regulations.</li>
+        </ul>
+    
+        <h2>Learn More</h2>
+        <p>For further reading on CSP and security best practices, check out these resources:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank">MDN - Content Security Policy</a></li>
+            <li><a href="https://owasp.org/www-project-secure-headers/" target="_blank">OWASP - Secure Headers Project</a></li>
+            <li><a href="https://content-security-policy.com/" target="_blank">Content Security Policy (CSP) Guide</a></li>
+        </ul>
+    
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a> -->
+    </div>
+    
+</body>
+</html>

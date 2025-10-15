@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Referrer & DNT Analysis Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Referrer & DNT Analysis Scan - Understanding Online Privacy</h1>
+        <p>This page breaks down and explains how Referrer & DNT (Do Not Track) Analysis scans work, what it means when a scan does not detect any issues, how users can be exposed, and the scientific process behind these scans.</p>
+
+        <h2>What is Referrer & DNT Analysis?</h2>
+        <p>A Referrer & DNT analysis checks whether a site correctly handles two key browser signals:<br>
+        The first is the referrer header: Reveals the URL of the page a visitor arrived from.<br>
+        The second is DNT header (DNT: 1): Indicates the user does not wish to be tracked.</p>
+        <p>The scan verifies that a site neither leaks unnecessary referrer data nor ignores the user’s DNT preference.</p>
+
+        <h2>What Happens When a Referrer & DNT Analysis Scan Shows Nothing?</h2>
+        <p>If a scan does not detect any issues with Referrer headers or DNT signals, it may indicate some of the following:</p>
+        <ul>
+            <li>The site strips or limits referrer information so it cannot identify the previous page.</li>
+            <li>DNT requests are honoured; tracking cookies or scripts are suppressed for opted-out users.</li>
+            <li>More subtle or disguised tracking tricks remained undetected by the scanner.</li>
+        </ul>
+        <p>Even with a “no problems found” result, hidden techniques may still slip through, so periodic re-testing is advised.</p>
+
+        <h2>How Users are Left Exposed Without Referrer and DNT Protection</h2>
+        <p>If a site mishandles these signals, people may face:</p>
+        <ul>
+            <li><strong>Unintended Data Exposure:</strong> Referrer strings might reveal personal or sensitive details during page-to-page navigation.</li>
+            <li><strong>Tracking Without Consent:</strong> Sites can ignore DNT and continue profiling visitors for ads or analytics.</li>
+            <li><strong>Cross-Site Tracking:</strong> Third parties can follow users across multiple domains via referrer leaks.</li>
+            <li><strong>Privacy Violations:</strong> Disregarding DNT can breach user expectations or even regulatory rules.</li>
+        </ul>
+
+        <h2>How to Protect Yourself from Referrer Leaks and Tracking</h2>
+        <p>Users and website administrators can take the following steps to protect privacy and block unnecessary tracking:</p>
+        <ul>
+            <li><strong>Using Privacy-Centric Browsers:</strong> Firefox, Brave, or similar browsers send stronger DNT signals and limit referrers.</li>
+            <li><strong>Installing Anti-Tracking Add-ons:</strong> Tools such as Privacy Badger or uBlock Origin block trackers and trim referrer headers.</li>
+            <li><strong>Disabling or Shortening Referrers:</strong> Modern browsers offer settings or flags to scrub or anonymise referrer data.</li>
+            <li><strong>Enabling DNT:</strong> Turn on the DNT option so compliant sites know not to track you.</li>
+            <li><strong>Forcing HTTPS:</strong> Encrypted requests lessen the chance that referrer information is exposed in transit.</li>
+        </ul>
+
+        <h2>The Science Behind Referrer & DNT Scanning</h2>
+        <p>Referrer & DNT scanners typically:</p>
+        <ul>
+            <li><strong>Monitor HTTP Requests:</strong> Capture outgoing traffic to inspect referrer fields for accidental data disclosure.</li>
+            <li><strong>Check DNT Compliance:</strong> Users can observe whether the site suppresses tracking when the DNT: 1 header is present.</li>
+            <li><strong>Test for Referrer Leaks:</strong> Try and navigate through various pages and domains to see if sensitive URLs leak via referrers.</li>
+            <li><strong>Compliance with Privacy Policies:</strong> The scan also checks if the website's privacy policy aligns with the observed referrer and tracking behaviour.</li>
+        </ul>
+
+        <h2>Why Websites Should Respect Referrer and DNT Signals</h2>
+        <p>Honouring these headers benefits both users and site operators:</p>
+        <ul>
+            <li><strong>Enhances Trust:</strong> Visitors feel safer on sites that uphold their privacy choices.</li>
+            <li><strong>Meets Legal Obligations:</strong> Frameworks like GDPR and CCPA expect transparent handling of tracking preferences.</li>
+            <li><strong>Reduces Data Exposure:</strong> Limiting referrer data cuts the risk of unintentional information leaks.</li>
+            <li><strong>Promotes Ethical Practices:</strong> Following user signals fosters a more responsible and privacy-friendly web.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on Referrer & DNT analysis and privacy best practices, check out these resources:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy" target="_blank">MDN - Referrer Policy</a></li>
+            <li><a href="https://www.eff.org/issues/do-not-track" target="_blank">Electronic Frontier Foundation - Do Not Track</a></li>
+            <li><a href="https://www.privacytools.io/" target="_blank">Privacy Tools - Protect Your Privacy</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

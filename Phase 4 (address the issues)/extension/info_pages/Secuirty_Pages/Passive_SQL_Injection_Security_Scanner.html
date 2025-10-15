@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL Injection Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Injection Scan - Understanding Web Security</h1>
+        <p>This page explains SQL Injection, what it means when a scan does not detect it, how users can be exposed, and the scientific process behind how these scans work.</p>
+
+        <h2>What is SQL Injection?</h2>
+        <p><strong>SQL Injection (SQLi)</strong> is a critical web security vulnerability that allows attackers to manipulate a website's database by injecting malicious SQL code through input fields.</p>
+        <p>Attackers exploit poorly secured input validation to gain unauthorized access, retrieve sensitive data, modify database contents, or even take control of a system.</p>
+
+        <h2>What Happens When a Scan Doesn't Detect SQL Injection?</h2>
+        <p>If a scan does not find any SQL Injection vulnerabilities, it generally means:</p>
+        <ul>
+            <li>The website has implemented proper security controls, such as prepared statements or parameterized queries.</li>
+            <li>Input validation and sanitization mechanisms are in place.</li>
+            <li>Database error messages are properly hidden to prevent information disclosure.</li>
+        </ul>
+        <p>However, passing a scan does not guarantee complete security. Advanced SQLi techniques may bypass automated scans, so continuous monitoring and manual testing are crucial.</p>
+
+        <h2>How Users are Left Exposed to SQL Injection</h2>
+        <p>If a website is vulnerable to SQL Injection, attackers can:</p>
+        <ul>
+            <li><strong>Access Sensitive Data:</strong> Extract user credentials, payment information, or private messages.</li>
+            <li><strong>Modify Database Content:</strong> Change prices, modify user roles, or deface content.</li>
+            <li><strong>Delete Data:</strong> Completely erase a database, leading to service outages or data loss.</li>
+            <li><strong>Gain Administrative Access:</strong> Take over user accounts, including administrator privileges.</li>
+            <li><strong>Execute Remote Commands:</strong> In advanced cases, attackers can execute system-level commands on the server.</li>
+        </ul>
+
+        <h2>How to Protect Yourself from SQL Injection</h2>
+        <p>Users and developers can take the following steps to prevent SQL Injection attacks:</p>
+        <ul>
+            <li><strong>Use Prepared Statements and Parameterized Queries:</strong> These prevent attackers from injecting harmful SQL commands.</li>
+            <li><strong>Employ Web Application Firewalls (WAF):</strong> A WAF can detect and block common SQL Injection patterns.</li>
+            <li><strong>Sanitize and Validate Inputs:</strong> Ensure that user inputs only allow expected values.</li>
+            <li><strong>Implement Least Privilege Database Access:</strong> Restrict database user permissions to limit the damage of an attack.</li>
+            <li><strong>Keep Software Updated:</strong> Regularly update CMS platforms, plugins, and frameworks to patch known vulnerabilities.</li>
+        </ul>
+
+        <h2>The Science Behind SQL Injection Scanning</h2>
+        <p>SQL Injection scanning tools work by probing a website with different test cases and analyzing responses to detect vulnerabilities. The process includes:</p>
+        <ul>
+            <li><strong>Automated Injection Attempts:</strong> The scanner submits various SQL payloads into input fields and observes how the database responds.</li>
+            <li><strong>Response Analysis:</strong> It checks whether the database returns an error message, sensitive data, or unexpected behavior.</li>
+            <li><strong>Time-Based Testing:</strong> If blind SQL Injection is suspected, the scanner may use time delays (e.g., `SELECT IF(1=1, SLEEP(5), 0)`) to detect vulnerabilities.</li>
+            <li><strong>Boolean-Based Testing:</strong> The scanner compares response differences to determine if SQL queries can be manipulated.</li>
+            <li><strong>Error-Based Detection:</strong> Some scans look for specific SQL errors that indicate improper input handling.</li>
+        </ul>
+
+        <h2>Why Websites Should Regularly Scan for SQL Injection</h2>
+        <p>Website owners and developers should perform regular vulnerability scans for SQL Injection because:</p>
+        <ul>
+            <li><strong>Cybersecurity Threats Are Constantly Evolving:</strong> New attack vectors emerge, requiring continuous updates to security measures.</li>
+            <li><strong>Data Breaches Can Have Legal Consequences:</strong> Regulations like GDPR and CCPA mandate strong data protection practices.</li>
+            <li><strong>Protecting User Trust:</strong> Security breaches can damage a company’s reputation and lead to loss of users.</li>
+            <li><strong>Financial Impact:</strong> SQL Injection attacks can result in direct financial losses or high costs for incident response and recovery.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on SQL Injection and web security, check out these resources:</p>
+        <ul>
+            <li><a href="https://owasp.org/www-community/attacks/SQL_Injection" target="_blank">OWASP - SQL Injection</a></li>
+            <li><a href="https://portswigger.net/web-security/sql-injection" target="_blank">PortSwigger - SQL Injection Guide</a></li>
+            <li><a href="https://www.acunetix.com/websitesecurity/sql-injection/" target="_blank">Acunetix - SQL Injection Overview</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

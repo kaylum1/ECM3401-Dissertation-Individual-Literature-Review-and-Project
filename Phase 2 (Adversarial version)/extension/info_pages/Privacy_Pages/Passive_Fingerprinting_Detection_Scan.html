@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fingerprinting Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fingerprinting Scan - Understanding Browser Fingerprinting</h1>
+        <p>This page will break down and explains fingerprinting scans, what it means when a scan does not detect any fingerprinting mechanisms, how users and organisations can be impacted by invasive fingerprinting techniques, and the process behind these scans.</p>
+
+        <h2>What is a Fingerprinting Scan?</h2>
+        <p>A fingerprinting scan is an inspection that uncovers ways a site or app harvests distinctive details about a visitor’s device or browser. Information such as browser version, operating system, screen size, installed fonts, and plugins can be combined to form a unique “digital fingerprint.”</p>
+
+        <p>Key aspects of a fingerprinting scan include some of the following below:</p>
+        <ul>
+            <li><strong>Data Collection Analysis:</strong> Identifying the types of device and browser information being gathered.</li>
+            <li><strong>Method Detection:</strong> Detecting techniques such as canvas or WebGL fingerprinting.</li>
+            <li><strong>Privacy Impact Evaluation:</strong> This will assess how the collected data could be used to track or profile users.</li>
+        </ul>
+
+        <h2>What Happens When a Fingerprinting Scan Shows Nothing?</h2>
+        <p>If a fingerprinting scan does not detect any fingerprinting mechanisms, it may indicate:</p>
+        <ul>
+            <li>That the website or application does not implement any active fingerprinting techniques.</li>
+            <li>Could be that any fingerprinting methods in use are effectively minimised or masked to protect user privacy.</li>
+            <li>The scan might not capture subtle or emerging fingerprinting strategies.</li>
+            <li>Regular monitoring is advised as new fingerprinting methods can emerge over time.</li>
+        </ul>
+        <p>A clean scan result is positive, but ongoing vigilance is essential to maintain user privacy.</p>
+
+        <h2>How Users and Organizations are Exposed to Fingerprinting Risks</h2>
+        <p>Absent strong controls, fingerprinting can lead to:</p>
+        <ul>
+            <li><strong>Privacy Invasion:</strong> Detailed tracking of browsing habits without consent.</li>
+            <li><strong>Targeted Advertising:</strong> Personalised ads driven by unique user profiles.</li>
+            <li><strong>Data Profiling:</strong> Aggregated data enabling fine-grained analysis of behaviour.</li>
+            <li><strong>Reduced Anonymity:</strong> Difficulty staying private across multiple sessions.</li>
+        </ul>
+
+        <h2>How to Mitigate Fingerprinting Risks</h2>
+        <p>To protect user privacy and mitigate fingerprinting risks, consider these best practices:</p>
+        <ul>
+            <li><strong>Minimise Data Exposure:</strong> By limiting the amount of device and browser information shared with websites.</li>
+            <li><strong>Implement Anti-Fingerprinting Measures:</strong> Use various techniques such as browser spoofing or randomisation to obscure unique identifiers.</li>
+            <li><strong>Educate Users:</strong> By Informing users about fingerprinting and provide tools or settings to enhance privacy when online.</li>
+            <li><strong>Regular Audits:</strong> Continuously scan for fingerprinting mechanisms and update privacy practices accordingly.</li>
+        </ul>
+
+        <h2>The Science Behind Fingerprinting Scanning</h2>
+        <p>Fingerprinting scanners operate by simulating different user environments and collecting the data points that websites can access. The process includes:</p>
+        <ul>
+            <li><strong>Simulating Diverse Conditions:</strong> Visiting the site with various browser and device configurations.</li>
+            <li><strong>Aggregating Data Points:</strong> Recording values like resolution, fonts, and plugins.</li>
+            <li><strong>Pattern Analysis:</strong> Judging whether the combined data can single out an individual.</li>
+            <li><strong>Reporting Results:</strong> Highlighting fingerprinting vectors and suggesting defences.</li>
+        </ul>
+
+        <h2>Why Fingerprinting Protection is Essential</h2>
+        <p>Robust protection against fingerprinting matters because it:</p>
+        <ul>
+            <li><strong>Preserves Privacy:</strong> Stops unwanted tracking and keeps users anonymous.</li>
+            <li><strong>Builds Trust:</strong> Demonstrates a respect for user privacy, boosting confidence.</li>
+            <li><strong>Enables Compliance:</strong> Helps meet data-protection laws and regulations.</li>
+            <li><strong>Supports Ethical Data Use:</strong> Promotes transparency and fairness in data collection</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For additional insights into fingerprinting prevention and privacy best practices, explore these resources:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage" target="_blank">MDN - Canvas Fingerprinting</a></li>
+            <li><a href="https://www.eff.org/privacy/fingerprinting" target="_blank">Electronic Frontier Foundation - Browser Fingerprinting</a></li>
+            <li><a href="https://www.privacytools.io/" target="_blank">Privacy Tools</a></li>
+        </ul>
+
+       <!--<a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTPS Scan - More Info 6
+    </title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 600px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #0077cc; }
+        p { font-size: 14px; }
+        .back-btn { display: inline-block; margin-top: 15px; padding: 8px 12px; background: #0077cc; color: white; border: none; border-radius: 5px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTTPS Scan - More Info</h1>
+        <p>A low HTTPS score means the site is using outdated TLS versions or lacks HSTS, making it vulnerable to eavesdropping.</p>
+        <p>To improve security, ensure TLS 1.2 or higher is enforced and HSTS is enabled.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security" target="_blank">Read More on Mozilla Docs</a>
+        <br>
+        <a href="javascript:window.close();" class="back-btn">Close</a>
+    </div>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP vs HTTPS: Understanding Web Security</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #0077cc;
+    }
+    p {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+    ul {
+      margin: 10px 20px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTTP vs HTTPS: Understanding Web Security</h1>
+    <p>This page is designed to help you understand what it means for a website to use HTTP or HTTPS, the science behind secure web communications, and the importance of HTTPS in protecting your data.</p>
+    
+    <h2>What is HTTP?</h2>
+    <p><strong>HTTP</strong> stands for <em>HyperText Transfer Protocol</em>. It is the protocol used for transferring data across the web. However, HTTP does not encrypt data, which means any information exchanged between your browser and the website is sent in plain text and can be intercepted by third parties.</p>
+    
+    <h2>What is HTTPS?</h2>
+    <p><strong>HTTPS</strong> stands for <em>HyperText Transfer Protocol Secure</em>. It combines HTTP with <strong>Transport Layer Security (TLS)</strong> to encrypt data during transmission. This ensures that any information exchanged remains private and secure, protecting you from potential eavesdropping or tampering.</p>
+    
+    <h2>The Science Behind HTTPS</h2>
+    <p>HTTPS relies on several core technologies and protocols:</p>
+    <ul>
+      <li><strong>TLS Encryption:</strong> Encrypts data so that even if intercepted, it remains unreadable to attackers.</li>
+      <li><strong>Digital Certificates:</strong> Verify the identity of a website. Certificates are issued by trusted Certificate Authorities (CAs) to ensure that you’re communicating with the legitimate site.</li>
+      <li><strong>Secure Handshake:</strong> A process where the client (your browser) and the server agree on encryption keys and protocols to secure the communication.</li>
+    </ul>
+    
+    <h2>Risks of Not Using HTTPS</h2>
+    <p>A website that only uses HTTP can be vulnerable to several security risks, including:</p>
+    <ul>
+      <li><strong>Data Interception:</strong> Sensitive information (passwords, credit card details, etc.) can be easily captured by malicious actors.</li>
+      <li><strong>Man-in-the-Middle Attacks:</strong> Attackers can intercept and potentially alter communications between you and the website.</li>
+      <li><strong>Loss of Trust:</strong> Modern browsers mark HTTP sites as "Not Secure," which can deter users from interacting with your site.</li>
+    </ul>
+    
+    <h2>Improving Web Security</h2>
+    <p>To secure your website and protect your users, consider the following best practices:</p>
+    <ul>
+      <li>Enforce the use of TLS 1.2 or higher to ensure strong encryption.</li>
+      <li>Enable HTTP Strict Transport Security (HSTS) to force browsers to interact with your site over HTTPS only.</li>
+      <li>Regularly update your digital certificates and ensure they are issued by a trusted CA.</li>
+      <li>Monitor your site for vulnerabilities and keep your server and software up to date.</li>
+    </ul>
+    
+    <h2>Learn More</h2>
+    <p>For further reading on web security and HTTPS, check out these resources:</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security" target="_blank">Mozilla Developer Network - TLS</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank">Wikipedia - HTTPS</a></li>
+      <li><a href="https://www.globalsign.com/en/blog/what-is-https/" target="_blank">GlobalSign - What is HTTPS?</a></li>
+    </ul>
+    
+    <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+  </div>
+</body>
+</html>

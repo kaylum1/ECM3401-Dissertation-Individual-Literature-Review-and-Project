@@ -1,0 +1,161 @@
+
+<!--settings page to help display-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Extension Settings</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+      .container {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+      }
+      .setting-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .setting-name {
+        font-size: 16px;
+      }
+      /* Toggle switch styling */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 28px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: #4CAF50;
+      }
+      input:checked + .slider:before {
+        transform: translateX(22px);
+      }
+      /* Back button styling */
+      #backBtn {
+        display: block;
+        margin: 20px auto 0;
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      #backBtn:hover {
+        background-color: #005fa3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Settings</h2>
+      <div class="setting-item">
+        <span class="setting-name">Ad Blocker</span>
+        <label class="switch">
+          <input type="checkbox" id="adBlockerToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-item">
+        <span class="setting-name">Automatic Cookie Decliner</span>
+        <label class="switch">
+          <input type="checkbox" id="cookieDeclinerToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <!-- VPN toggle section commented out because VPN is unavailable.
+      <div class="setting-item">
+        <span class="setting-name">VPN (unavailable)</span>
+        <label class="switch">
+          <input type="checkbox" id="vpnToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      -->
+      <button id="backBtn">Back</button>
+    </div>
+    <script src="settings.js"></script>
+  </body>
+</html>
+
+
+
+
+
+<!--
+web page to test the ad blocker 
+https://www.freeconvert.com/mp3-converter
+
+
+https://www.dailymail.co.uk/tvshowbiz/index.html
+
+
+to add more ad blocker if they come up go to the backend.js 
+
+{
+    id: 10,
+    priority: 1,
+    action: { type: "block" },
+    condition: {
+      urlFilter: "ajs-assets.ftstatic.com",
+      resourceTypes: ["script"]
+    }
+  }
+
+
+  inspect the the ad and find url and add it
+
+
+
+
+
+
+  cookie decliner seem to be wokring 
+
+  https://www.imdb.com/ works with cookies and ad blocker 
+
+
+  https://www.currys.co.uk/ works with cookies and ad blocker 
+-->

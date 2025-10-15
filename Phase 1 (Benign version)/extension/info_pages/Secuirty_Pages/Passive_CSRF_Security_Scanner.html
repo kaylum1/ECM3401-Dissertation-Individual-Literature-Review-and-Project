@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSRF Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSRF Scan - Understanding Cross-Site Request Forgery</h1>
+        <p>This page explains what Cross-Site Request Forgery (CSRF) scans does. What it means when a scan does detect anything, and how users can be exposed and methods to protect them, and the scientific process behind how these scans work.</p>
+    
+        <h2>What is Cross-Site Request Forgery (CSRF)?</h2>
+        <p>Cross-Site Request Forgery (CSRF) is a type of attack; where a website will try and trick tricks a users browser into making a request to another site where the user is authenticated. This can lead to unauthorised actions being performed on the user's behalf.</p>
+    
+        <p>CSRF attacks typically target:</p>
+        <ul>
+            <li><strong>Bank Transfers:</strong> This can allow an attacker to initiate unauthorised transactions.</li>
+            <li><strong>Account Takeover:</strong> Attackers can change email addresses or passwords.</li>
+            <li><strong>Content Manipulation:</strong> Attackers may post unwanted content or delete data.</li>
+            <li><strong>Privilege Escalation:</strong> In administrative accounts, attackers can modify security settings.</li>
+        </ul>
+    
+        <h2>What Happens When a CSRF Scan Shows Nothing?</h2>
+        <p>If a scan does not detect CSRF vulnerabilities, it means some of the following things:</p>
+        <ul>
+            <li>The website properly uses CSRF protection mechanisms such as CSRF tokens.</li>
+            <li>Forms require authentication and do not accept cross-origin requests.</li>
+            <li>The "SameSite" cookie attributes are configured correctly to block unauthorised requests.</li>
+            <li>The scanner was unable to detect logic-based CSRF flaws that certain require user interaction.</li>
+        </ul>
+        <p>However, a clean scan result does not always mean the website is fully secure. Some CSRF vulnerabilities may still exist in specific workflows.</p>
+    
+        <h2>How Users are Left Exposed Without CSRF Protection</h2>
+        <p>When a website does not implement proper CSRF protection, users may face the following risks:</p>
+        <ul>
+            <li><strong>Unauthorised Transactions:</strong> Attackers can perform bank transfers or purchases using a logged-in session.</li>
+            <li><strong>Account Takeovers:</strong> Users' email addresses and passwords may be changed by attackers.</li>
+            <li><strong>Data Corruption:</strong> Attackers can delete or modify user data increasing threat.</li>
+            <li><strong>Exploiting Administrative Functions:</strong> Admin users may unknowingly change system settings or grant access to attackers.</li>
+        </ul>
+    
+        <h2>How to Protect Yourself from CSRF Attacks</h2>
+        <p>Users and website administrators can take the following steps to protect against CSRF attacks:</p>
+        <ul>
+            <li><strong>Enable CSRF Tokens:</strong> Making sure that websites use and implement CSRF tokens that must be submitted with each form request.</li>
+            <li><strong>Use SameSite Cookies:</strong> Setting cookies with SameSite=Strict prevents unauthorised cross-origin requests.</li>
+            <li><strong>Verify Referrer Headers:</strong> Websites can check the HTTP Referer header to ensure requests originate from trusted sources.</li>
+            <li><strong>Enable Two-Factor Authentication (2FA):</strong> Even if an attacker initiates a request, 2FA can prevent unauthorised access.</li>
+            <li><strong>Log Out When Not in Use:</strong> Users should log out from important websites when finished to limit CSRF risks.</li>
+        </ul>
+    
+        <h2>The Science Behind CSRF Scanning</h2>
+        <p>CSRF scanners analyse web applications to detect vulnerabilities in how they handle user requests. The process includes:</p>
+        <ul>
+            <li><strong>Analysing Form Submissions:</strong> The scanner inspects form based requests for missing CSRF tokens.</li>
+            <li><strong>Testing Cross-Origin Requests:</strong> It attempts to submit unauthorised requests from different origins.</li>
+            <li><strong>Checking Cookie Policies:</strong> The scanner verifies if session cookies have SameSite attributes.</li>
+            <li><strong>Simulating User Sessions:</strong> Advanced scanners act as authenticated users to check if unauthorised actions can be triggered.</li>
+        </ul>
+    
+        <h2>Why Websites Should Implement CSRF Protection</h2>
+        <p>Protecting against CSRF attacks is essential for maintaining security and user trust. Websites should:</p>
+        <ul>
+            <li><strong>Comply with Security Best Practices:</strong> OWASP recommends CSRF protection for all authenticated requests.</li>
+            <li><strong>Prevent Unauthorised Transactions:</strong> By making sure proper security ensures users’ actions are legitimate.</li>
+            <li><strong>Enhance User Trust:</strong> Users are more likely to engage with secure websites.</li>
+            <li><strong>Comply with Regulations:</strong> By following the Data Protection laws, such as GDPR, which requires strong security measures.</li>
+        </ul>
+    
+        <h2>Learn More</h2>
+        <p>For further reading on CSRF vulnerabilities and security best practices, check out these resources:</p>
+        <ul>
+            <li><a href="https://owasp.org/www-community/attacks/csrf" target="_blank">OWASP - CSRF Attack Overview</a></li>
+            <li><a href="https://portswigger.net/web-security/csrf" target="_blank">PortSwigger - CSRF Guide</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SameSite" target="_blank">MDN - SameSite Cookie Attribute</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

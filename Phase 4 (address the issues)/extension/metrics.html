@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Metrics Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Scoring Metrics Focus</h1>
+    <form id="weightForm">
+      <label><input type="radio" name="weightSystem" value="normal" checked> Normal</label>
+      <label><input type="radio" name="weightSystem" value="security"> Security</label>
+      <label><input type="radio" name="weightSystem" value="privacy"> Privacy</label>
+      <label><input type="radio" name="weightSystem" value="adversarial"> Adversarial</label>
+      <!-- <label><input type="radio" name="weightSystem" value="random"> Random</label> -->
+      <button type="submit">Save Settings</button>
+    </form>
+    <button id="backBtn">Back</button>
+  </div>
+  <script src="metrics.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Security Headers Checker - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Security Headers Checker - Understanding Web Security</h1>
+        <p>This page explains security headers, what it means when a scan does not detect any, how users can be exposed, and the scientific process behind how these scans work.</p>
+    
+        <h2>What are Security Headers?</h2>
+        <p>Security headers are HTTP response headers that help protect websites and users from common web security threats, such as cross-site scripting (XSS), clickjacking, and data injection attacks.</p>
+    
+        <p>Common security headers include:</p>
+        <ul>
+            <li>Content Security Policy (CSP); Prevents the execution of unauthorized scripts.</li>
+            <li>Strict-Transport-Security (HSTS): Forces HTTPS to prevent protocol downgrades.</li>
+            <li>X-Frame-Options: Prevents clickjacking attacks by blocking site embedding in iframes.</li>
+            <li>X-Content-Type-Options; Prevents MIME-type sniffing vulnerabilities.</li>
+            <li>Referrer-Policy: Controls how much referrer information is shared.</li>
+            <li>Permissions-Policy: Restricts browser access to features like the camera and microphone.</li>
+        </ul>
+    
+        <h2>What Happens When a Security Headers Scan Shows Nothing?</h2>
+        <p>When a scanner can’t find any headers (or finds them mis-set), it usually means:</p>
+        <ul>
+            <li>The site simply hasn’t added the headers, leaving blind spots attackers can poke at.</li>
+            <li>Some headers exist but are misspelled or misconfigured, so browsers ignore them.</li>
+            <li>Classic exploits XSS, clickjacking, protocol downgrades are suddenly back on the table.</li>
+            <li>HTTPS might not be strictly enforced, exposing traffic to eavesdropping.</li>
+        </ul>
+        <p>Missing headers don’t always create an instant breach, but they’re a clear sign the site’s security hygiene needs work.</p>
+    
+        <h2>How Users are Left Exposed Without Security Headers</h2>
+        <p>Without that extra layer, people can run into some of the following:</p>
+        <ul>
+            <li>Man-in-the-middle attacks – no HSTS means an attacker can force a drop back to HTTP.</li>
+            <li>Clickjacking – absent X-Frame-Options lets crooks hide your page in a sneaky iframe.</li>
+            <li>XSS injections – no CSP equals free rein for malicious scripts.</li>
+            <li>Phishing or data leakage – loose referrer rules can spill private info between pages.</li>
+            <li>Unwanted device access – a lax Permissions-Policy may let sites silently tap cams or mics.</li>
+        </ul>
+    
+        <h2>How to Protect Yourself from Security Header Risks</h2>
+        <p>Users and website administrators can improve security by:</p>
+        <ul>
+            <li>Checking Security Headers: Use tools like SecurityHeaders.com to scan websites.</li>
+            <li>Enforcing HTTPS with HSTS: Ensure that websites always load over secure connections.</li>
+            <li>Using a Browser with Built-in Security: Firefox and Brave offer additional privacy protections.</li>
+            <li>Installing Privacy Extensions: Use tools like uBlock Origin to block scripts that may exploit missing headers.</li>
+            <li>Checking the Site’s Certificate: Always verify the SSL/TLS certificate in the address bar.</li>
+        </ul>
+    
+        <h2>The Science Behind Security Header Scanning</h2>
+        <p>Security header scanners work by analysing the HTTP response headers returned by a website. The process includes:</p>
+        <ul>
+            <li>Requesting the Website’s HTTP Headers: The scanner sends a request and checks the response for security headers.</li>
+            <li>Validating Header Presence and Configuration: The scanner verifies whether key security headers exist and are properly set.</li>
+            <li>Assessing Header Strength: Some scanners evaluate how restrictive a site's CSP policy is to prevent script injection.</li>
+            <li>Detecting Header Misconfigurations: Missing or weak settings are flagged as security risks.</li>
+        </ul>
+    
+        <h2>Why Websites Should Implement Security Headers</h2>
+        <p>Security headers are an essential part of web security. Websites should enforce them to:</p>
+        <ul>
+            <li>Prevent Data Leaks: Proper referrer policies reduce unintended data exposure.</li>
+            <li>Protect Against Common Attacks: Headers like CSP and HSTS help mitigate threats.</li>
+            <li>Comply with Privacy Regulations: GDPR and CCPA require strong security measures.</li>
+            <li>Improve User Trust: A well-secured website enhances credibility.</li>
+        </ul>
+
+        <h2>Learn More</h2>
+        <p>For further reading on security headers and web security, check out these resources:</p>
+        <ul>
+            <li><a href="https://owasp.org/www-project-secure-headers/" target="_blank">OWASP - Secure Headers Project</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" target="_blank">MDN - HTTP Headers</a></li>
+            <li><a href="https://securityheaders.com/" target="_blank">SecurityHeaders.com - Online Header Scanner</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

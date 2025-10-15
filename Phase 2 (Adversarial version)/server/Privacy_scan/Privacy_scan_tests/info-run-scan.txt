@@ -1,0 +1,42 @@
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Cookie_Privacy_Scan_test
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Data_Leakage_HTTP_Headers_Scan_test
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Do_Not_Track_Support_Scan_test
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Fingerprinting_Detection_Scan_test            not workinhg
+
+
+
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Privacy_and_Tracker_Audit_Scanner_test
+
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Referrer_DNT_Analysis_Scan_test
+
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Third_Party_Data_Collection_Scanner_test       not working 
+
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Third_Party_Script_Evaluation_Scanner_test      not working 
+
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Tracker_Detection_Scan_test                    not working 
+
+
+
+python -m unittest Privacy_scan.Privacy_scan_tests.Passive_Tracker_Script_Scanner_test
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+<!--http://localhost:8000/login-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Insecure Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffe6e6;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 2px solid #ff0000;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      }
+      h2 {
+        text-align: center;
+        color: #cc0000;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #cc0000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <!-- This login form is intentionally insecure:
+           - Uses method="get" (instead of "post"), which subtracts 2 points.
+           - Lacks any CSRF token.
+           - The password field has autocomplete enabled (not "off"), subtracting 1 point.
+           These factors combine to produce a low score (2/10 with the current scan logic).
+           To reach a score of 1/10, you’d need to adjust the scoring logic to allow further penalties. -->
+      <form action="/login" method="get">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" autocomplete="on" placeholder="Password">
+        <input type="submit" value="Sign In">
+      </form>
+    </div>
+  </body>
+</html>

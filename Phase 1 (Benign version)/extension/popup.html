@@ -1,0 +1,156 @@
+<!--popup page to help display-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scan Summary</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        width: 320px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      /* Status banner: default gray, white text */
+      #statusContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: #ccc;
+        color: #fff;
+      }
+      /* Error variation: red background */
+      #statusContainer.error {
+        background-color: #F44336;
+      }
+      /* The message text */
+      #statusMessage {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+      }
+      /* Retry button (hidden until error) */
+      #retryBtn {
+        display: none;
+        margin-left: 8px;
+        padding: 5px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #c0392b;
+        color: #fff;
+      }
+      #retryBtn:hover {
+        background-color: #a93226;
+      }
+
+      /* URL display */
+      .url-text {
+        margin-bottom: 10px;
+      }
+
+      /* Score circle */
+      .score-circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #ccc; /* default; updated by JS */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0 auto 20px;
+        border: 5px solid #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-top-color: #09f;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      #scoreText {
+        display: none;
+      }
+
+      /* Failure tally */
+      #failureTally {
+        margin-bottom: 10px;
+        font-weight: bold;
+        display: none;
+      }
+
+      /* Buttons */
+      .button-container {
+        margin-top: 20px;
+      }
+      button {
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      #settingsBtn {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Status banner (always shown) -->
+      <div id="statusContainer">
+        <div id="statusMessage">nothing changed</div>
+        <button id="retryBtn">INFO</button>
+      </div>
+
+      <!-- URL Display -->
+      <div id="urlText" class="url-text">URL: Loading...</div>
+
+      <!-- Score Circle -->
+      <div class="score-circle" id="scoreCircle">
+        <div class="spinner" id="spinner"></div>
+        <span id="scoreText"></span>
+      </div>
+
+      <!-- Failure Tally -->
+      <div id="failureTally"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="button-container">
+        <button id="securityBtn">Security Scan Info</button>
+        <button id="privacyBtn">Privacy Scan Info</button>
+        <button id="settingsBtn">⚙️</button>
+        <button id="logsPage">Log pages of url</button>
+        <button id="metricsBtn">Metrics</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

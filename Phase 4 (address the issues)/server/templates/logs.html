@@ -1,0 +1,69 @@
+<!--http://localhost:8000/logs-->
+<!-- templates/logs.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Scan Logs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #eee;
+      }
+      tr:nth-child(even) {
+        background-color: #fff;
+      }
+      tr:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scan Logs</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Norm</th>
+          <th>Privacy</th>
+          <th>Security</th>
+          <th>Random</th>
+          <th>Adversarial</th>
+          <th>Duration (s)</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in logs %}
+          <tr>
+            <td>{{ log.url }}</td>
+            <td>{{ log.final_score_norm }}</td>
+            <td>{{ log.final_score_privacy }}</td>
+            <td>{{ log.final_score_security }}</td>
+            <td>{{ log.final_score_rand }}</td>
+            <td>{{ log.final_score_adver }}</td>
+            <td>{{ "%.2f"|format(log.duration) }}</td>
+            <td>{{ log.timestamp }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

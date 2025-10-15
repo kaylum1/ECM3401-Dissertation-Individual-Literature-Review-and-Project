@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directory Listing Check Scan - More Info</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { 
+            color: #0077cc; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 15px 0; 
+        }
+        ul { 
+            margin: 10px 20px; 
+            padding: 0; 
+        }
+        li { 
+            margin-bottom: 10px; 
+        }
+        a { 
+            color: #0077cc; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 15px; 
+            background: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Directory Listing Check Scan - Understanding Web Security</h1>
+        <p>This page explains directory listing scans, what it means when a scan does not detect anything, how users can be exposed, and the scientific process behind how these scans work.</p>
+    
+        <h2>What is a Directory Listing?</h2>
+        <p>Directory listing is a web server feature that allows visitors to see the files and folders stored on a web server when no index file (e.g., index.html) is present.</p>
+    
+        <p>When directory listing is enabled, anyone can access files and subdirectories that may contain sensitive data, configuration files, or scripts.</p>
+    
+        <h2>What Happens When a Directory Listing Scan Shows Nothing?</h2>
+        <p>If a scan does not detect directory listing vulnerabilities, it may be a sign that one or more of the following is happening:</p>
+        <ul>
+            <li>The server is properly configured to deny direct directory access.</li>
+            <li>Index files (e.g., index.html or index.php) are in place to prevent listing.</li>
+            <li>Some of the directory listing is explicitly disabled in the server configuration.</li>
+            <li>The scanner could not detect dynamically the exposed directories.</li>
+        </ul>
+        <p>A clean scan result does not always mean a website is secure, as some directories may still be accessible if configured wrongly.</p>
+    
+        <h2>How Users are Left Exposed Without Directory Listing Protections</h2>
+        <p>When directory listing is enabled, users and site owners may face the following risks:</p>
+        <ul>
+            <li><strong>Data Exposure:</strong> Publicly available directories may contain sensitive information.</li>
+            <li><strong>Configuration Leaks:</strong> Attackers can find server configurations, logs, and backup files.</li>
+            <li><strong>Malware Distribution:</strong> If attackers gain access, they can upload and execute malicious scripts.</li>
+            <li><strong>Unauthorised Access:</strong> Sensitive files such as database credentials, API keys, and user data may be exposed.</li>
+        </ul>
+    
+        <h2>How to Protect Yourself from Directory Listing Vulnerabilities</h2>
+        <p>Website administrators can secure their servers by taking the following measures:</p>
+        <ul>
+            <li><strong>Disable Directory Listing:</strong> Use server configurations to prevent unauthorised access.</li>
+            <li><strong>Use Proper Index Files:</strong> By making sure to have an index.html or index.php file exists in all directories.</li>
+            <li><strong>Restrict Access to Sensitive Directories:</strong> Use .htaccess or server settings to block access to specific folders.</li>
+            <li><strong>Monitor and Audit File Permissions:</strong> Regularly review file permissions to prevent unintended exposure.</li>
+            <li><strong>Use Security Headers:</strong> By implementing security headers such as X-Frame-Options and Content-Security-Policy to reduce risk.</li>
+        </ul>
+    
+        <h2>The Science Behind Directory Listing Scanning</h2>
+        <p>Directory listing scanners analyse web servers to detect exposed directories and files. The process includes:</p>
+        <ul>
+            <li><strong>Sending HTTP Requests:</strong> The scanner attempts to access common directories (e.g., /admin, /logs, /backups).</li>
+            <li><strong>Checking HTTP Response Codes:</strong> The scanner will look for items like HTTP 200 (OK) responses on directory requests.</li>
+            <li><strong>Analyzing Default File Listings:</strong> Some scanners check for common directory listing pages generated by servers.</li>
+            <li><strong>Looking for Misconfigured Permissions:</strong> It checks for files that should not be accessible, such as .env or config.php.</li>
+        </ul>
+    
+        <h2>Why Websites Should Disable Directory Listing</h2>
+        <p>Websites should usually disable directory listing as it can help security and protect sensitive data. Key reasons include:</p>
+        <ul>
+            <li><strong>Preventing Data Leaks:</strong> Sensitive information such as logs, backups, and credentials should not be publicly accessible.</li>
+            <li><strong>Reducing Attack Surface:</strong> Exposed directories can give attackers insight into the website structure.</li>
+            <li><strong>Protecting User Privacy:</strong> Logs or configuration files may contain user information.</li>
+            <li><strong>Compliance with Security Best Practices:</strong> Organisations must follow security guidelines to protect customer data.</li>
+        </ul>
+    
+        <h2>Learn More</h2>
+        <p>For further reading on directory listing vulnerabilities and security best practices, check out these resources:</p>
+        <ul>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP - Web Security Top Ten</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">MDN - HTTP Status Codes</a></li>
+            <li><a href="https://www.acunetix.com/websitesecurity/directory-listing/" target="_blank">Acunetix - Directory Listing Security</a></li>
+        </ul>
+
+        <!-- <a href="javascript:window.close();" class="back-btn">Close</a>-->
+    </div>
+</body>
+</html>

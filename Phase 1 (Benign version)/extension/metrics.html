@@ -1,0 +1,60 @@
+<!--metrics page to help display-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Metrics Settings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 10px 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Scoring Metrics Focus</h1>
+    <form id="weightForm">
+      <label><input type="radio" name="weightSystem" value="normal" checked> Normal</label>
+      <label><input type="radio" name="weightSystem" value="security"> Security</label>
+      <label><input type="radio" name="weightSystem" value="privacy"> Privacy</label> 
+      <!-- <label><input type="radio" name="weightSystem" value="adversarial"> Adversarial</label> -->
+      <!-- Commented out the random metric selection -->
+      <!-- <label><input type="radio" name="weightSystem" value="random"> Random</label> -->
+      <button type="submit">Save Settings</button>
+    </form>
+    <button id="backBtn">Back</button>
+  </div>
+  <script src="metrics.js"></script>
+</body>
+</html>
